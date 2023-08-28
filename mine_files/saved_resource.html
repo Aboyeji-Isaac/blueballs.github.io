@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://wildlearner.com/code/19b3f9ff-74d5-4fd2-942c-5e49ca8b9961/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+              
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <meta http-equiv="X-UA-Compatible" content="ie=edge">
+              <title>Document</title>
+              <style>
+                /* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    background:
+    linear-gradient(135deg, #0274eece, 
+    #550663);
+    overflow-x: hidden;
+    
+}
+
+
+
+/* Style the header *
+header {
+    background: linear-gradient(135deg, #007BFF, #9C27B0);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
+/* Style the header */
+header {
+    background: linear-gradient(135deg, #007BFF, #9C27B0);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 0px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Add this line to make the header fixed */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Align it to the left edge of the viewport */
+    width: 100%; /* Make it 100% wide */
+    z-index: 999; /* Ensure the header is above other content */
+}
+
+
+/* Style the logo container *
+.logo {
+    /* Your existing logo styles go here *
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* Style the blue circles *
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #007BFF; /* Blue color *
+    border-radius: 50%; /* Make it a circle *
+    position: absolute;
+    animation: moveCircle 6s infinite linear;
+}
+
+* Define the animation for random motion *
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, 20px);
+    }
+    50% {
+        transform: translate(50px, -50px);
+    }
+    105% {
+        transform: translate(-0px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}*/
+
+/* Add this CSS to your existing styles.css file */
+
+/* Style for the logo container */
+
+/* Add this CSS to your existing styles.css file */
+
+/* Style for the logo container */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-left: 30px;
+}
+
+/* Style for the blue circles */
+.circle {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #007BFF,
+     #581464);
+    border-radius: 50%;
+    position: absolute;
+    animation: moveCircles 4s linear infinite alternate; /* Apply the animation */
+}
+
+/* Define keyframes animation for moving circles */
+@keyframes moveCircles {
+    0%, 100% {
+        transform: translateX(-5px); /* Initial and final position to the left */
+    }
+    50% {
+        transform: translateX(30px); /* Middle position to the right */
+    }
+}
+
+/* Style the second circle */
+.circle:nth-child(2) {
+    background: linear-gradient(135deg, #9C27B0, #007BFF); /* Different color for the second circle */
+    animation-delay: 1.4s; /* Delay the animation for the second circle */
+}
+
+
+/* Style the navigation links */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative; /* Add relative positioning to the anchor elements */
+    padding-bottom: 5px; /* Add some space for the line to appear */
+}
+
+/* Add the line as a pseudo-element */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 4px; /* Height of the line */
+    border-radius: 30%;
+    background-color: transparent; /* Transparent by default */
+    transition: background-color 0.3s ease-in-out; /* Transition for the line color change */
+}
+
+/* Change the line color on hover */
+nav a:hover::after {
+    background: linear-gradient(135deg, #9C27B0, #007BFF); /* Color of the line on hover (blue) */
+}
+
+
+/* Style the Join box */
+.join-box {
+    background-color: #a74b90; /* Background color of the Join box */
+    border-radius: 10px; /* Rounded corners for the box */
+    padding: 6px 12px; /* Padding inside the box */
+    color: #fff; /* Text color inside the Join box */
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block; /* Make the box inline with text */   
+    transition: transform 0.3s ease-in-out; /* Add a transition effect to the transform property */
+}
+
+/* Increase the size of the Join box on hover */
+.join-box:hover {
+    transform: scale(1.4); /* Increase the size on hover (1.1 times the original size) */
+}
+
+
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Style the footer *
+footer {
+    text-align: center;
+    /* Style the footer with a gradient background *
+    background: linear-gradient(135deg, #007BFF, #9C27B0);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+}*/
+
+/* Style your footer */
+.fixed-footer {
+    background: linear-gradient(135deg, #007BFF, #9C27B0); /* Set the background color for the footer */
+    color: #fff; /* Text color for the footer */
+    padding: 20px; /* Adjust the padding as needed */
+    text-align: center; /* Center the content horizontally */
+    position: fixed; /* Make the footer fixed */
+    bottom: 0; /* Position it at the bottom of the viewport */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure the footer is above other content */
+}
+
+/* Create a container for the boxes and center them */
+.box-container {
+    margin-top: 0px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: calc(100vh - 100px); /* Adjust this value to account for header and footer height */
+    
+}
+
+.box {
+    background-color: #ff;
+    border: 1px solid #;
+    box-sizing: border-box;
+    height: 200px;
+    width: 400px;
+    padding: 10px;
+    color: #333;
+    justify-content:center;
+    text-align: justify;
+    margin-bottom: 20px;
+    box-shadow: 
+        0 0 20px rgba(0, 0, 255, 0.5), /* First shadow (blue) */
+        0 0 10px rgba(255, 0, 119, 0.5); /* Second shadow (red)*/
+        transition: transform 0.3s ease-in-out; /* Add a transition effect to the transform property */
+}
+
+    /*.box:hover {
+    transform: scale(1.05); /* Increase the size on hover (1.1 times the original size) */
+}
+}
+
+/* Add other CSS rules you have here */
+
+/* Keyframes animation for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply the animation to the .box elements */
+.box {
+    padding: 5%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4%;
+    margin: 50px;
+    color: rgb(252, 250, 247);
+    text-align: justify;
+    animation: float 5s ease infinite; /* Adjust the duration and ease as needed */
+    overflow: auto;
+}
+
+/* ... (previous CSS code) ... */
+
+/* Keyframes animation for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Adjust the float distance as needed */
+    }
+}
+
+/* Apply the animation to the .content-with-float elements */
+.content-with-float {
+    animation: float 3s ease infinite; /* Adjust the duration and ease as needed */
+}
+
+/* ... (previous CSS code) ... */
+
+/* Apply scrollable overflow to the .content-scroll elements */
+.content-scroll {
+    max-height: 200px; /* Adjust the maximum height as needed */
+    overflow: auto;
+}
+/* Style the scroll bar */
+/* For WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 9px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #ff; /* Color of the thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #ff; /* Color of the track */
+}
+
+/* Add hover effect to scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #007BFF, #9C27B0); /* Change the color on hover */
+}
+
+/* Add hover effect to scrollbar track */
+::-webkit-scrollbar-track:hover {
+    background: #ff; /* Change the color on hover */
+}
+
+
+/* ... (rest of CSS code) ... */
+
+/* ... (rest of CSS code) ... */
+
+.b-circle-01 {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(135deg, #007BFF, #9C27B0); /* Color of the circle */
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute;
+    top: 50px; /* Position it at the top of the viewport */
+    left: -100px; /* Align it to the left edge of the viewport */
+
+    z-index: -1; /* Place it behind other content */
+}
+
+.b-circle-02 {
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(135deg, #9C27B0, #007BFF); /* Color of the circle */
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute;
+    top: 500px; /* Position it at the top of the viewport */
+    left: 400px; /* Align it to the left edge of the viewport */
+
+    z-index: -1; /* Place it behind other content */
+}
+
+.b-circle-03 {
+    width: 700px;
+    height: 700px;
+    background: linear-gradient(135deg, #36628b93,
+     #9b27b075); /* Color of the circle */
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute;
+    top: 1500px; /* Position it at the top of the viewport */
+    left: 0px; /* Align it to the left edge of the viewport */
+    z-index: -1; /* Place it behind other content */
+}
+              </style>
+            </head>
+            <body>
+              
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="./styles.css">
+
+
+
+    <header class="fixed-header">
+      <div class="logo animated-logo">
+    <div class="circle"></div>
+    <div class="circle"> </div>
+</div>
+        <nav>
+            <ul>
+                <li><a href="https://wildlearner.com/code/19b3f9ff-74d5-4fd2-942c-5e49ca8b9961/#about">About</a></li>
+                <li><a href="https://wildlearner.com/code/19b3f9ff-74d5-4fd2-942c-5e49ca8b9961/#section">Section</a></li>
+                <li><a href="https://wildlearner.com/code/19b3f9ff-74d5-4fd2-942c-5e49ca8b9961/#discover">Discover</a></li>
+            
+    <div class="join-box">
+        <a href="https://wildlearner.com/code/19b3f9ff-74d5-4fd2-942c-5e49ca8b9961/#join">Join</a>
+    </div>
+    </ul></nav></header>
+
+    <main>
+      <div class="box-container">
+    <div class="box" id="about">
+        <h1>About Us</h1>
+        <div class="content-scroll">
+        <p class="content-with-float">This is where you can provide information about your website or organization.</p>
+        </div>
+    </div>
+
+    <div class="box" id="section">
+        <h1>Our Sections</h1>
+        <div class="content-scroll">
+        <p class="content-with-float">Here, you can describe the different sections or categories of your website.</p>
+        </div>
+    </div>
+
+    <div class="box" id="discover">
+        <h1>Discover More</h1>
+        <div class="content-scroll">
+        <p class="content-with-float">Share some exciting content or products for visitors to discover.Certainly, here's a 50-word Lorem Ipsum text:
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac eros euismod, convallis justo eu, scelerisque dolor. Nulla facilisi. Nullam vitae posuere tortor. Suspendisse potenti. Integer nec turpis eu arcu feugiat aliquam. Vivamus tristique, augue ac vestibulum iaculis, ex justo scelerisque semper."
+
+Lorem Ipsum is often used as a placeholder text in design and publishing to demonstrate the visual form of a document without using meaningful content.</p>
+        </div>
+    </div>
+
+    <div class="box" id="join">
+        <h1>Join Us</h1>
+        <p class="content-with-float">Encourage visitors to become a part of your community or organization.</p>
+    </div>
+    <div class="box" id="meet">
+        <h1>Meet with Us</h1>
+        <div class="content-scroll">
+        <p class="content-with-float">Encourage visitors to become a part of your community or organization.Certainly, here's a 50-word Lorem Ipsum text:
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac eros euismod, convallis justo eu, scelerisque dolor. Nulla facilisi. Nullam vitae posuere tortor. Suspendisse potenti. Integer nec turpis eu arcu feugiat aliquam. Vivamus tristique, augue ac vestibulum iaculis, ex justo scelerisque semper."
+
+Lorem Ipsum is often used as a placeholder text in design and publishing to demonstrate the visual form of a document without using meaningful content.</p>
+        </div>
+    </div>
+    <div class="box" id="content">
+        <h1>Our Content</h1>
+        <div class="content-scroll">
+        <p class="content-with-float">Encourage visitors to become a part of your community or organization. Certainly, here's a 50-word Lorem Ipsum text:
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac eros euismod, convallis justo eu, scelerisque dolor. Nulla facilisi. Nullam vitae posuere tortor. Suspendisse potenti. Integer nec turpis eu arcu feugiat aliquam. Vivamus tristique, augue ac vestibulum iaculis, ex justo scelerisque semper."
+
+Lorem Ipsum is often used as a placeholder text in design and publishing to demonstrate the visual form of a document without using meaningful content.</p>
+        </div>
+    </div>
+      <div class="box" id="contact">
+        <h1>Contact Us</h1>
+        <div class="content-scroll">
+        <p class="content-with-float">Encourage visitors to become a part of your community or organization.</p>
+        </div>
+    </div>
+      </div>
+</main>
+<div class="b-circle-01"> </div>
+<div class="b-circle-02"> </div>
+<div class="b-circle-03"> </div>
+
+    <footer class="fixed-footer">
+        <p>© 2023 Your Website</p>
+    </footer>
+    <script src="./index.js.download"> </script>
+
+
+
+
+              <script type="text/javascript">
+                const header = document.querySelector('.fixed-header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled'); // Add a class when scrolling down
+    } else {
+        header.classList.remove('scrolled'); // Remove the class when scrolling back up
+    }
+});
+
+
+
+              </script>
+            
+            
+          </body></html>
